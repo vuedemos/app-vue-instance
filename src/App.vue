@@ -23,6 +23,64 @@ export default {
           this.message = res
         })
     }
+  },
+  beforeCreate () {
+    console.log(`>>> ==== 钩子函数 beforeCreate ==== >>>`)
+    console.log(`this.message: ${this.message}`)
+    console.log(`this.$el: ${this.$el}`)
+    console.log(`>>> ==== End ==== >>>`)
+  },
+  created () {
+      console.log(`>>> ==== 钩子函数 created ==== >>>`)
+      console.log(`this.message: ${this.message}`)
+      console.log(`this.$el: ${this.$el}`)
+      console.log(`>>> ==== End ==== >>>`)
+  },
+  beforeMount () {
+    console.log(`>>> |_==_| 钩子函数 beforeMount |_==_| >>>`)
+    console.log(`this.message: ${this.message}`)
+    console.log(`this.$el: ${this.$el}`)
+    console.log(`>> |_==_| this.$el.outerHTML 开始 |_==_| >>`)
+    console.log(this.$el.outerHTML)
+    console.log(`>> |_==_| this.$el.outerHTML 结束 |_==_|`)
+    console.log(`>>> |_==_| End |_==_| >>>`)
+  },
+  mounted () {
+      console.log(`>>> |_==_| 钩子函数 mounted |_==_| >>>`)
+      console.log(`this.message: ${this.message}`)
+      console.log(`this.$el: ${this.$el}`)
+      console.log(`>> |_==_| this.$el.outerHTML 开始 |_==_| >>`)
+      console.log(this.$el.outerHTML)
+      console.log(`>> |_==_| this.$el.outerHTML 结束 |_==_| >>`)
+      console.log(`>>> |_==_| End |_==_| >>>`)
+  },
+  beforeUpdate () {
+    console.log(`>>> (^_^) 钩子函数 beforeUpdate (^_^) >>>`)
+    console.log(`this.message: ${this.message}`)
+    console.log(`this.$el: ${this.$el}`)
+    console.log(this.$el.outerHTML)
+    console.log(`>>> (^_^) End (^_^) >>>`)
+  },
+  updated () {
+      console.log(`>>> (^_^) 钩子函数 updated (^_^) >>>`)
+      console.log(`this.message: ${this.message}`)
+      console.log(`this.$el: ${this.$el}`)
+      console.log(this.$el.outerHTML)
+      console.log(`>>> (^_^) End (^_^) >>>`)
+  },
+  beforeDestroy () {
+    console.log(`(^_^) 钩子函数 beforeDestroy (^_^)`)
+    console.log(`this.message: ${this.message}`)
+    console.log(`this.$el:${this.$el}`)
+    console.log(this.$el.outerHTML)
+    console.log(`(^_^) End (^_^)`)
+  },
+  destroyed () {
+      console.log(`(^_^) 钩子函数 destroyed (^_^)`)
+      console.log(`this.message: ${this.message}`)
+      console.log(`this.$el:${this.$el}`)
+      console.log(this.$el.outerHTML)
+      console.log(`(^_^) End (^_^)`)
   }
 }
 </script>
